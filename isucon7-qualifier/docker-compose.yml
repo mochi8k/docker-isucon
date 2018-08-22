@@ -30,10 +30,12 @@ services:
       #context: ./docker/app/perl
       # context: ./docker/app/python
       #context: ./docker/app/ruby
-      args:
-        GIT_URL: https://github.com/isucon/isucon7-qualify.git
+      # args:
+      #   GIT_URL: https://github.com/isucon/isucon7-qualify.git
+    volumes:
+      - ../../isucon/isucon7-qualify/webapp/nodejs:/home/isucon/isubata/webapp/nodejs
     #image: isucon7-qualifier-app:golang
-    image: isucon7-qualifier-app:nodejs
+    # image: isucon7-qualifier-app:nodejs
     #image: isucon7-qualifier-app:perl
     # image: isucon7-qualifier-app:python
     #image: isucon7-qualifier-app:ruby
